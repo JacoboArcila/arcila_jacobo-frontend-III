@@ -1,17 +1,33 @@
-// El componente App es el padre de:
-// - Cabecera
-// - Listado
-// ESTADO: App debe manejar en su estado un número para contabilizar el total de elementos comprados.
-// MÉTODOS: App debe tener un método para aumentar este número y que pueda ser ejecutado por su nieto Item.
-// PROPS: App deberá pasar por props lo necesario a sus componenetes internos.
+import { useState } from "react";
+import Cabecera from "./components/Cabecera";
+import Listado from "./components/Listado";
+import GlobalStyles from "./GlobalStyles";
+import { Contenedor } from "./AppStyles";
+import videoCompras from "./video/compras.mp4";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [view, setView] = useState(true);
+
+  const changeView = () => {
+    setView(!view);
+  };
 
   return (
-    <div className="App">
-      <Cabecera />
-      <Listado />
-    </div>
+    <Contenedor className="App">
+      <GlobalStyles />
+      <video autoPlay loop muted>
+        <source src={videoCompras} type="video/mp4" />
+      </video>
+      <div className={view ? "capa" : "capa-oculta"}></div>
+      <div className={view ? "shop" : "shop-oculta"}>
+        <Cabecera count={count} />
+        <Listado setCount={setCount} />
+      </div>
+      <div className="button">
+        <button onClick={() => changeView()}>Ver el video</button>
+      </div>
+    </Contenedor>
   );
 }
 
