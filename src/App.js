@@ -25,7 +25,7 @@ function App() {
         <Listado setCount={setCount} />
       </div>
       <div className="button">
-        <button onClick={() => changeView()}>Ver el video</button>
+        <button onClick={() => changeView()}>{view ? 'Ver el video' : 'Ir a Comprar'}</button>
       </div>
     </Contenedor>
   );
