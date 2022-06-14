@@ -21,24 +21,40 @@ export const Producto = styled.div`
     color: white;
     border-radius: 3px;
   }
-`;
 
-export const Button = styled.button`
-    border: none;
+  button {
     padding: 10px 0;
-    color: white;
     text-transform: uppercase;
-    background-color: #eb5e28;
     font-weight: bolder;
-    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,0.5) 50%, transparent 50%);
-    background-image: linear-gradient(45deg, rgba(0,0,0,0.5) 50%, transparent 50%);
+  }
+
+  .compra {
+    border: none;
+    color: white;
+    background-color: #eb5e28;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.5) 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.5) 50%,
+      transparent 50%
+    );
     background-position: 100%;
     background-size: 400%;
     -webkit-transition: background 300ms ease-in-out;
     transition: background 400ms ease-in-out;
 
     &:hover {
-        background-position: 0;
-        cursor: pointer;
+      background-position: 0;
+      cursor: pointer;
     }
-`
+
+    .sinStock {
+      background-color: #fffcf2;
+      color: #fffcf257;
+    }
+  }
+`;

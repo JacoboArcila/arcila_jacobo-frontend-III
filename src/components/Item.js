@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Producto, Button} from './ItemStyles';
+import {Producto} from './ItemStyles';
 
 const Item = ({producto, setCount}) => {
 
@@ -21,7 +21,7 @@ const Item = ({producto, setCount}) => {
       <h2>{producto.producto.nombre}</h2>
       <p>{producto.producto.descripcion}</p>
       <h5>Stock: {num === 0 ? <span className='stock'>Sin stock</span> : num } </h5>
-      <Button onClick={() => handleNum()}>Comprar</Button>
+      <button className={num === 0 ? 'sinStock' : 'compra'} onClick={() => handleNum()}>{num === 0 ? 'sin Stock' : 'Comprar'}</button>
     </Producto>
   )
 }
