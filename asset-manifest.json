@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/arcila_jacobo-frontend-III/static/js/main.fa4031e2.js",
+    "static/media/compras.mp4": "/arcila_jacobo-frontend-III/static/media/compras.c5b6f708d7149fd042f4.mp4",
+    "index.html": "/arcila_jacobo-frontend-III/index.html",
+    "main.fa4031e2.js.map": "/arcila_jacobo-frontend-III/static/js/main.fa4031e2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fa4031e2.js"
+  ]
+}
